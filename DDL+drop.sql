@@ -212,6 +212,13 @@ INSERT INTO
 VALUES
 	('S101', 'CS101', 'S1', 'Fall', 2009, 'A');
 
+
+
+
+
+
+
+
 -- a. Find the titles of courses in the Comp. Sci. department that have 3 credits.
 SELECT
 	title
@@ -220,6 +227,7 @@ FROM
 WHERE
 	dept_name = 'Comp. Sci.'
 	AND credits = 3;
+
 
 -- b. Find the IDs of all students who were taught by an instructor named Einstein; make sure there are no duplicates in the result.
 SELECT
