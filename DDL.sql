@@ -114,3 +114,9 @@ create table prereq
 	 foreign key (prereq_id) references course
 	);
 
+
+
+
+
+
+
