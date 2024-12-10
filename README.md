@@ -2,6 +2,10 @@
 
 # Instructor Demo: PostgreSQL Shell
 
+
+![Output](image.png)
+
+
 Postgres Shell is an advanced client and code editor for Postgres located right in our terminal. Let's open the Postgres Shell.
 
 * To start, we navigate to the root directory of our project and then type the following command into the terminal to confirm that the Postgres server is up and running. If successful, `psql` and a version number will appear.

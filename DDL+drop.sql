@@ -229,24 +229,26 @@ WHERE
 	AND credits = 3;
 
 
+
+
 -- b. Find the IDs of all students who were taught by an instructor named Einstein; make sure there are no duplicates in the result.
 SELECT
 	DISTINCT takes.ID
 FROM
 	takes
-	JOIN teaches ON takes.course_id = teaches.course_id
-	AND takes.sec_id = teaches.sec_id
-	AND takes.semester = teaches.semester
-	AND takes.year = teaches.year
-	JOIN instructor ON teaches.ID = instructor.ID
+	JOIN teaches USING (course_id, sec_id, semester, year)
+	JOIN instructor USING (ID)
 WHERE
 	instructor.name = 'Einstein';
+
+
 
 -- c. Find the highest salary of any instructor.
 SELECT
 	MAX(salary) AS highest_salary
 FROM
 	instructor;
+
 
 -- d. Find all instructors earning the highest salary (there may be more than one with the same salary).
 SELECT
@@ -273,7 +275,8 @@ FROM
 WHERE
 	semester = 'Fall'
 	AND year = 2009
-GROUP BY
+GROUP BY 
+-- The GROUP BY course_id, sec_id ensures that the enrollment count is calculated for each unique section.
 	course_id,
 	sec_id;
 
