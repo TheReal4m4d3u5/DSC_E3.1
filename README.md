@@ -1,6 +1,6 @@
 # E3.1DSC
 
-![Output](image.png)
+
 
 Practice Exercises 3.1
 a.
@@ -23,3 +23,12 @@ Find the maximum enrollment, across all sections, in Autumn 2009.
 
 g.
 Find the sections that had the maximum enrollment in Autumn 2009.
+
+
+![Output](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)

@@ -275,8 +275,9 @@ FROM
 WHERE
 	semester = 'Fall'
 	AND year = 2009
-GROUP BY 
+
 -- The GROUP BY course_id, sec_id ensures that the enrollment count is calculated for each unique section.
+GROUP BY 
 	course_id,
 	sec_id;
 
@@ -296,6 +297,7 @@ FROM
 			course_id,
 			sec_id
 	) AS section_enrollments;
+
 
 -- g. Find the sections that had the maximum enrollment in Autumn 2009.
 WITH section_enrollments AS (
