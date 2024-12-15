@@ -217,8 +217,6 @@ VALUES
 
 
 
-
-
 -- a. Find the titles of courses in the Comp. Sci. department that have 3 credits.
 SELECT
 	title
@@ -227,9 +225,6 @@ FROM
 WHERE
 	dept_name = 'Comp. Sci.'
 	AND credits = 3;
-
-
-
 
 -- b. Find the IDs of all students who were taught by an instructor named Einstein; make sure there are no duplicates in the result.
 SELECT
@@ -241,14 +236,11 @@ FROM
 WHERE
 	instructor.name = 'Einstein';
 
-
-
 -- c. Find the highest salary of any instructor.
 SELECT
 	MAX(salary) AS highest_salary
 FROM
 	instructor;
-
 
 -- d. Find all instructors earning the highest salary (there may be more than one with the same salary).
 SELECT
